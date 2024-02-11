@@ -1,5 +1,5 @@
 {
-  description = "A simple JSON parser";
+  description = "Dijkstra's Shortest Path Implementation";
 
   inputs = {
     nixpkgs.url = "github:anmonteiro/nix-overlays";
@@ -16,7 +16,7 @@
         }).extend
           (self: super: { ocamlPackages = super.ocaml-ng.ocamlPackages_5_0; });
 
-        package = pkgs.callPackage ./nix/parser.nix { inherit nix-filter; };
+        package = pkgs.callPackage ./nix/package.nix { inherit nix-filter; };
 
         shell = import ./nix/shell.nix { inherit pkgs package; };
       in

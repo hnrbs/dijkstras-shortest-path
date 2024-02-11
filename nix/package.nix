@@ -2,7 +2,7 @@
 
 with pkgs.ocamlPackages;
 buildDunePackage rec {
-  pname = "json_parser";
+  pname = "dijkstras_shortest_path";
   version = "0.0.0";
 
   src = with nix-filter.lib;
